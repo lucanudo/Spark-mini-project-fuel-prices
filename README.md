@@ -3,10 +3,10 @@
 This repository contains the notebook for the Spark Mini Project, focused on exploring and modeling French fuel price data (2022–2024).
 
 ## Contents
-- `Spark_project.ipynb` — main notebook (end-to-end pipeline: ingestion → preparation → visualization → EV proxy → modeling)
+- `Spark_project _E&L.ipynb` — main notebook (end-to-end pipeline: ingestion → preparation → visualization → EV proxy → modeling)
 - `config.yaml` — configuration file (paths and parameters)
 - `data/*.csv.gz` — input datasets (mirrors the sources used by the notebook)
-- `data/fr_departements.geojson` — France departments GeoJSON (for the choropleth maps)
+- `fr_departements.geojson` — France departments GeoJSON (for the choropleth maps)
 
 > **Note on completeness:** the notebook is designed to be runnable end-to-end by downloading the required resources directly from the original sources.  
 > The data files (`.csv.gz`), `config.yaml`, and the GeoJSON are included **for completeness and robustness**, so the project can still run even if external downloads fail or network access is limited.

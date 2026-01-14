@@ -1,0 +1,21 @@
+# ==========================================
+# GAS PRICES PROJECT - GLOBAL CONFIGURATION
+# ==========================================
+
+# Local directory where the data will be stored
+storage:
+  folder_name: "gas_data_folder"
+
+# Years of interest for the analysis
+processing_range:
+  start_year: 2022
+  end_year: 2024
+
+# Remote repository details
+github_repository:
+  base_url: "https://raw.githubusercontent.com/rvm-courses/GasPrices/master/"
+  
+# Here we only list files that DO NOT follow the year-based logic (e.g., metadata/registries)
+  metadata_files:
+    - "Stations2024.csv.gz"
+    - "Services2024.csv.gz"

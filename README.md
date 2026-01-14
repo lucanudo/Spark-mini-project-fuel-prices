@@ -1,8 +1,29 @@
 # Big Data Processing with Spark project IT Tools 2 
-This repository contains the project for Big Data Processing with Spark (IT Tools 2), including notebook and datasets used for analysis and processing.
 
-**Data Sources**
-The project uses gas price data and related information provided on GitHub.
-Gas Price Data (2022–2024): 3 years of data from GasPrices GitHub repository (https://github.com/rvm-courses/GasPrices).
-Gas Stations File (2024 version)
-Services File (2024 version)
+This repository contains the notebook for the Spark Mini Project, focused on exploring and modeling French fuel price data (2022–2024).
+
+## Contents
+- `Spark_project.ipynb` — main notebook (end-to-end pipeline: ingestion → preparation → visualization → EV proxy → modeling)
+- `config.yaml` — configuration file (paths and parameters)
+- `data/*.csv.gz` — input datasets (mirrors the sources used by the notebook)
+- `data/fr_departements.geojson` — France departments GeoJSON (for the choropleth maps)
+
+> **Note on completeness:** the notebook is designed to be runnable end-to-end by downloading the required resources directly from the original sources.  
+> The data files (`.csv.gz`), `config.yaml`, and the GeoJSON are included **for completeness and robustness**, so the project can still run even if external downloads fail or network access is limited.
+
+The notebook will:
+- load data (either from the original sources or from the local `data/` folder, depending on configuration),
+- build weekly indices and a normalized `price_index`,
+- generate trend plots and choropleth maps,
+- run an exploratory EV proxy analysis (based on `Services2024`),
+- train and evaluate a next-day forecasting baseline using Spark ML.
+
+## Requirements
+- Python 3.x
+- Apache Spark / PySpark
+- Common Python packages used in the notebook: `pyspark`, `pandas`, `matplotlib`, `folium`, `pyyaml` (and any other imports already present in the notebook)
+
+## Reproducibility
+- A “self-contained” GeoJSON loading step is included to ensure the choropleth map works even in a clean environment.
+- Lightweight sanity checks validate `week_index` and `price_index` to catch pipeline issues early.
+

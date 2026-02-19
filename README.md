@@ -1,5 +1,7 @@
 # Big Data Processing with Spark project IT Tools 2 
 
+**This project was developed in collaboration between Luca Nudo and Emidio Grillo.**
+
 This repository contains the notebook for the Spark Mini Project, focused on exploring and modeling French fuel price data (2022–2024).
 
 ## Contents

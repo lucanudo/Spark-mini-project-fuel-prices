@@ -27,3 +27,4 @@ The notebook will:
 - A “self-contained” GeoJSON loading step is included to ensure the choropleth map works even in a clean environment.
 - Lightweight sanity checks validate `week_index` and `price_index` to catch pipeline issues early.
 
+
